@@ -1,5 +1,7 @@
-function drawdiamond() {
+let terminate = false;
+async function drawdiamond() {
     terminate = true;
+    await sleep(4500);
     const c = document.getElementById("drawingsurface");
     const ctx = c.getContext("2d");
     ctx.clearRect(0, 0, 1000, 1000);
@@ -16,10 +18,11 @@ function drawdiamond() {
     drawside(0, 500, 500, 0, "purple");
     ctx.closePath();
 }
-function drawfancydiamond() {
+async function drawfancydiamond() {
     terminate = true;
-    var c = document.getElementById("drawingsurface");
-    var ctx = c.getContext("2d");
+    await sleep(4500);
+    const c = document.getElementById("drawingsurface");
+    const ctx = c.getContext("2d");
     ctx.clearRect(0, 0, 1000, 1000);
     ctx.beginPath();
     //Outline
@@ -38,25 +41,26 @@ function drawfancydiamond() {
     ctx.closePath();
 }
 function drawside(a, b, d, e, f) {
-    var c = document.getElementById("drawingsurface");
-    var ctx = c.getContext("2d");
+    const c = document.getElementById("drawingsurface");
+    const ctx = c.getContext("2d");
     ctx.moveTo(a, b);
     ctx.lineTo(d, e);
     ctx.strokeStyle = f;
     ctx.stroke();
 }
 function drawarc(a, b, c1, c2, r, d, e, f, anti) {
-    var c = document.getElementById("drawingsurface");
-    var ctx = c.getContext("2d");
+    const c = document.getElementById("drawingsurface");
+    const ctx = c.getContext("2d");
     ctx.moveTo(a, b);
     ctx.arc(c1, c2, r, d, e, anti);
     ctx.strokeStyle = f;
     ctx.stroke();
 }
-function drawhelmet() {
+async function drawhelmet() {
     terminate = true;
-    var c = document.getElementById("drawingsurface");
-    var ctx = c.getContext("2d");
+    await sleep(4500);
+    const c = document.getElementById("drawingsurface");
+    const ctx = c.getContext("2d");
     ctx.clearRect(0, 0, 1000, 1000);
     ctx.beginPath();
     //Outline
@@ -93,8 +97,8 @@ function drawhelmet() {
     ctx.closePath();
 }
 async function animatediamond(terminate) {
-    var c = document.getElementById("drawingsurface");
-    var ctx = c.getContext("2d");
+    const c = document.getElementById("drawingsurface");
+    const ctx = c.getContext("2d");
     ctx.clearRect(0, 0, 1000, 1000);
     //State 1
     ctx.beginPath();
@@ -164,4 +168,3 @@ async function animatediamond(terminate) {
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
-let terminate = false;
