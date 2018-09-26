@@ -1,26 +1,9 @@
 //Workshop
-var firstName = "Julien";
-var lastName = "Pleijte";
-var age = 20;
-//console.log(firstName);
-//console.log(lastName);
-//console.log(age);
-console.log("Hallo, ik ben " + firstName + " " + lastName + " en ik ben " + age + " jaar oud.");
-var priceapple = 0.59;
-var amountapple = 200;
-var total = priceapple * amountapple;
-//console.log(priceapple);
-//console.log(amountapple);
-//console.log(total);
-console.log("Ik heb " + total + " euros uitgegeven aan appels.");
-var hz = "Please visit the HZ University of applied science";
-//console.log(hz);
-console.log(hz.replace("applied", "mad"));
-var currentAction = "Strings";
+const currentAction : string = "Strings";
 // console.log(currentAction);
 if (currentAction == "Calculating") {
-    var a = 20;
-    var b = 10;
+    const a : number = 20;
+    const b : number = 10;
     // console.log(a);
     // console.log(b);
     console.log(a + b);
@@ -29,7 +12,7 @@ if (currentAction == "Calculating") {
     console.log(a * b);
 }
 else if (currentAction == "Strings") {
-    var hello = "Hello";
+    const hello : string = "Hello";
     console.log(hello);
     console.log(hello.toUpperCase());
     console.log(hello.length);
@@ -38,7 +21,7 @@ else if (currentAction == "Strings") {
     console.log(hello.charAt(1));
 }
 else if (currentAction == "Booleans") {
-    var grade = 6;
+    const grade : number = 6
     //console.log(grade);
     if (grade >= 6) {
         console.log("Jij hebt een voldoende");
@@ -50,11 +33,11 @@ else if (currentAction == "Booleans") {
 else {
     console.log("Invalid input");
 }
-var gewicht = 95;
-var lengte = 1.88;
+const gewicht : number = 95;
+const lengte : number = 1.88;
 // console.log(gewicht);
 // console.log(lengte);
-var bmi = gewicht / Math.pow(lengte, 2);
+let bmi = gewicht / Math.pow(lengte, 2);
 // console.log(bmi);
 if (bmi >= 30) {
     console.log("Classificatie: Obesitas Risico: duidelijk verhoogd");
@@ -68,28 +51,9 @@ else if (bmi >= 18.5 && bmi <= 24.9) {
 else {
     console.log("Classificatie: ondergewicht Risico: laag (maar verhoogd risico op andere aandoeningen)");
 }
-//Begin opdrachten Variables
-//Opdracht 1
-var number = 3;
-//console.log(number);
-var iseven = number % 2 == 0;
-//console.log(iseven);
-console.log(number + " is een gelijk getal is " + iseven);
-//Opdracht 2
-var programming = "Programming is not so cool";
-//console.log(programming);
-console.log(programming.replace("not ", ""));
-//Opdracht 3
-//Dit is niet een slimme opdracht, want als je deze twee waarden met elkaar vergelijkt zal je altijd het resultaat false krijgen,
-//omdat je een cijfer met een string wil vergelijken.
-var veertienhonderd = 1400;
-var naboo = "Ik woon in Naboo";
-//console.log(veertienhonderd);
-//console.log(naboo);
-//console.log(veertienhonderd == naboo);
 //Begin opdrachten Conditionals
 //Opdracht 1
-var cijfer = 10;
+const cijfer : number = 10;
 // console.log(cijfer);
 if (cijfer > 9) {
     console.log("Uitmuntend");
@@ -104,7 +68,7 @@ else {
     console.log("Onvoldoende");
 }
 //Opdracht 2
-switch (cijfer) {
+switch(cijfer) {
     case 10: {
         console.log("Uitmuntend");
         break;
@@ -131,9 +95,9 @@ switch (cijfer) {
     }
 }
 //Opdracht 3
-var purchasedBook = true;
-var job = "teacher";
-var inTrain = false;
+const purchasedBook : boolean = true;
+const job : string = "teacher";
+const inTrain : boolean = false;
 if (purchasedBook && inTrain && job == "teacher") {
     console.log("Finally I can enjoy my book!");
 }

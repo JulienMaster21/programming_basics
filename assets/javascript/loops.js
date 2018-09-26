@@ -40,7 +40,7 @@ for (i = 1; i <= 25; i++) {
         console.log(i + " is niet te delen door 3");
     }
 }
-//Opdrachten
+//Opdrachten Loops
 //Opdracht 1
 var divide4 = 1;
 //console.log(divide4);
