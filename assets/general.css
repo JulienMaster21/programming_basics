@@ -21,3 +21,8 @@ button {
     display: block;
     width: 1002px;
 }
+/*DOM Scripting*/
+.firstItem {
+    font-weight: bold;
+    color: red;
+}
